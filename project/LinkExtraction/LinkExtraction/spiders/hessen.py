@@ -7,14 +7,14 @@ from scrapy.linkextractors import LinkExtractor
 class HessenSpider(scrapy.Spider):
     name = 'hessen'
     allowed_domains = ['hessen.de']
-    start_urls = ['https://www.hessen.de/fuer-buerger/']
+    start_urls = ['https://www.hessen.de/']
 
     def parse(self, response):
-        if ("hessen.de" in response.url):
-            extractor = LinkExtractor(allow='fuer-buerger', allow_domains='hessen.de') #, deny=("veranstaltungskalender", "jcalpro"))
+        if ("www.hessen.de" in response.url):
+            extractor = LinkExtractor(allow_domains='hessen.de') #, deny=("veranstaltungskalender", "jcalpro"))
             #extractor = LinkExtractor()  # , deny=("veranstaltungskalender", "jcalpro"))
             links = extractor.extract_links(response)
-            extractor = LinkExtractor(deny_domains=('hessen.de', 'facebook.com', 'youtube.com', 'twitter.com', 'instagram.com'))
+            extractor = LinkExtractor(deny_domains=('hessen.de', 'facebook.com', 'youtube.com', 'twitter.com', 'instagram.com', 'radroutenplaner.hessen.de'))
             linksext = extractor.extract_links(response)
             for link in linksext:
                 yield {'from': response.url, 'url': link.url, 'text': link.text.strip()}

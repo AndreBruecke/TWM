@@ -25,13 +25,12 @@ class GutenbergSpider(scrapy.Spider):
             title = doc.xpath(".//a/text()").extract_first()
             url = response.urljoin(doc.xpath(".//a/@href").extract_first())
             
-            if len(title) > 0:
+            if title and len(title) > 0:
                 yield {'name': name, 'title': title, 'url': url}
         
             
 def runCrawler(name):
     c = CrawlerProcess({
-        'CLOSESPIDER_PAGECOUNT': 20,
         'USER_AGENT': 'HochschuleDarmstadt-TextWebMining',
         'FEED_FORMAT': 'csv',
         'FEED_URI': '/media/sf_Shared/Git/data/GutenbergSpider.csv',
