@@ -34,7 +34,7 @@ def runCrawler(name):
         'CLOSESPIDER_PAGECOUNT': 20,
         'USER_AGENT': 'HochschuleDarmstadt-TextWebMining',
         'FEED_FORMAT': 'csv',
-        'FEED_URI': '/media/sf_Shared/Git/data/'+name+'.csv',
+        'FEED_URI': '/media/sf_Shared/Git/data/GutenbergSpider.csv',
         'DOWNLOAD_DELAY': 1,
         'ROBOTSTXT_OBEY': True,
         'HTTPCACHE_ENABLED': True
