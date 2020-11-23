@@ -7,12 +7,11 @@ from scrapy.linkextractors import LinkExtractor
 class HessenSpider(scrapy.Spider):
     name = 'hessen'
     allowed_domains = ['hessen.de']
-    start_urls = ['https://www.hessen.de/']
+    start_urls = ['https://www.hessen.de/regierung/']
 
     def parse(self, response):
         if ("www.hessen.de" in response.url):
-            extractor = LinkExtractor(allow_domains='hessen.de') #, deny=("veranstaltungskalender", "jcalpro"))
-            #extractor = LinkExtractor()  # , deny=("veranstaltungskalender", "jcalpro"))
+            extractor = LinkExtractor(allow='regierung', allow_domains='hessen.de')
             links = extractor.extract_links(response)
             extractor = LinkExtractor(deny_domains=('hessen.de', 'facebook.com', 'youtube.com', 'twitter.com', 'instagram.com', 'radroutenplaner.hessen.de'))
             linksext = extractor.extract_links(response)
@@ -25,7 +24,7 @@ class HessenSpider(scrapy.Spider):
 c = CrawlerProcess({
     'USER_AGENT': 'HochschuleDarmstadt-TextWebMining',
     'FEED_FORMAT': 'csv',
-    'FEED_URI': '/media/sf_Shared/Git/data/HessenSpider.csv',
+    'FEED_URI': '/media/sf_Shared/Git/data/HessenRegierung.csv',
     'DOWNLOAD_DELAY' : 1,
     'ROBOTSTXT_OBEY' : True,
     'HTTPCACHE_ENABLED' : True
