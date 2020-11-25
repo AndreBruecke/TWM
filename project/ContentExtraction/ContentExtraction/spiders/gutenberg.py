@@ -6,31 +6,35 @@ class GutenbergSpider(scrapy.Spider):
     name = 'gutenberg'
     allowed_domains = ['projekt-gutenberg.org']
 
-    start_urls = ['https://www.projekt-gutenberg.org/autoren/info/autor-az.html']
+    start_urls = ['https://www.projekt-gutenberg.org/info/texte/the-gesc.html']
     #author_base_url = 'https://www.projekt-gutenberg.org/autoren/'
 
     def parse(self, response):
-        author_links = response.xpath("//body/table[@class='center']//a/@href")
-        for href in author_links:
-            url = response.urljoin(href.extract())
-            yield scrapy.Request(url, callback = self.parse_author_page)
+        items = response.xpath("//body//dl/dd")
+        for item in items:
+            author = item.xpath("./text()").extract_first().strip()
+            a_tag = item.xpath("./a")
+            if a_tag:
+                title = a_tag.xpath("./text()").extract_first()
+                url = response.urljoin(a_tag.xpath("./@href").extract_first())
+                #print(author, title, url)
+                yield scrapy.Request(url, callback = self.parse_document_page, meta={'author': author, 'title': title})
 
-    def parse_author_page(self, response):
-        name = response.xpath("//h2[@class='name']/text()").extract_first()
-        print(name)
+    def parse_document_page(self, response):
+        p_tags = response.xpath("//*/p[count(preceding-sibling::hr)=1]")
         
-        archived = response.xpath("//div[@class='archived']//li")
-
-        for doc in archived:
-            title = doc.xpath(".//a/text()").extract_first()
-            url = response.urljoin(doc.xpath(".//a/@href").extract_first())
-            
-            if title and len(title) > 0:
-                yield {'name': name, 'title': title, 'url': url}
+        text = ""
+        for p_tag in p_tags:
+            paragraph = p_tag.xpath("./text()").extract_first().strip()
+            text += paragraph + '\n'
+        
+        yield {'author': response.meta.get('author'), 'title': response.meta.get('title'), 'chapter': text.strip()}
+        
         
             
 def runCrawler(name):
     c = CrawlerProcess({
+        'CLOSESPIDER_PAGECOUNT': 10,
         'USER_AGENT': 'HochschuleDarmstadt-TextWebMining',
         'FEED_FORMAT': 'csv',
         'FEED_URI': '/media/sf_Shared/Git/data/GutenbergSpider.csv',

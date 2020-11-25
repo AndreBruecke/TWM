@@ -7,13 +7,13 @@ from scrapy.linkextractors import LinkExtractor
 class HessenSpider(scrapy.Spider):
     name = 'hessen'
     allowed_domains = ['hessen.de']
-    start_urls = ['https://www.hessen.de/regierung/']
+    start_urls = ['https://www.hessen.de/presse/']
 
     def parse(self, response):
         if ("www.hessen.de" in response.url):
-            extractor = LinkExtractor(allow='regierung', allow_domains='hessen.de')
+            extractor = LinkExtractor(allow=("presse"), allow_domains='hessen.de')
             links = extractor.extract_links(response)
-            extractor = LinkExtractor(deny_domains=('hessen.de', 'facebook.com', 'youtube.com', 'twitter.com', 'instagram.com', 'radroutenplaner.hessen.de'))
+            extractor = LinkExtractor(deny_domains=('www.hessen.de', 'facebook.com', 'youtube.com', 'twitter.com', 'instagram.com', 'radroutenplaner.hessen.de'))
             linksext = extractor.extract_links(response)
             for link in linksext:
                 yield {'from': response.url, 'url': link.url, 'text': link.text.strip()}
@@ -24,7 +24,7 @@ class HessenSpider(scrapy.Spider):
 c = CrawlerProcess({
     'USER_AGENT': 'HochschuleDarmstadt-TextWebMining',
     'FEED_FORMAT': 'csv',
-    'FEED_URI': '/media/sf_Shared/Git/data/HessenRegierung.csv',
+    'FEED_URI': '/media/sf_Shared/Git/data/HessenPresse.csv',
     'DOWNLOAD_DELAY' : 1,
     'ROBOTSTXT_OBEY' : True,
     'HTTPCACHE_ENABLED' : True
