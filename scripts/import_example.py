@@ -10,13 +10,15 @@ cursor = connection.cursor()
 chapterDf = pd.read_csv("/media/sf_Shared/Git/data/GutenbergGenres.csv")
 print(len(chapterDf))
 
-sqlMetacontent = 'insert into "SYSTEM"."ZA_METACONTENT" (DOCUMENT_ID, TITLE, AUTHOR) VALUES (?,?,?)'
-sqlLabel = 'insert into "SYSTEM"."ZA_LABEL" (DOCUMENT_ID, LABEL_NAME) VALUES (?,?)'
-sqlContent = 'insert into "SYSTEM"."ZA_CHAPTER" (DOCUMENT_ID, FULLTEXT) VALUES (?,?)'
+#sqlMetacontent = 'insert into "SYSTEM"."ZA_METACONTENT" (DOCUMENT_ID, TITLE, AUTHOR) VALUES (?,?,?)'
+#sqlLabel = 'insert into "SYSTEM"."ZA_LABEL" (DOCUMENT_ID, LABEL_NAME) VALUES (?,?)'
+
+sqlContent14 = 'insert into "SYSTEM"."ZA_CHAPTER_14" (DOCUMENT_ID, FULLTEXT) VALUES (?,?)'
 
 
 for index, row in chapterDf.iterrows():
-    cursor.execute(sqlMetacontent, (int(index), str(row['title'])[0:97], str(row['author'])))
-    cursor.execute(sqlLabel, (index, row['genre']))
-    cursor.execute(sqlContent, (index, str(row['chapter'])))
-    time.sleep(0.1)
+    #cursor.execute(sqlMetacontent, (int(index), str(row['title'])[0:97], str(row['author'])))
+    #cursor.execute(sqlLabel, (index, row['genre']))
+    if index >= 1300:
+        cursor.execute(sqlContent14, (index, str(row['chapter'])))
+        time.sleep(0.1)
