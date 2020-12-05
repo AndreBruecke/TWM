@@ -1,0 +1,101 @@
+document_id,ta_normalized,ta_type,length
+157,einen,"['adjective', 'determiner', 'noun', 'verb', 'pronoun']",5
+568,einen,"['noun', 'determiner', 'adjective', 'pronoun']",4
+1265,einen,"['determiner', 'noun', 'adjective', 'pronoun']",4
+280,eine,"['determiner', 'pronoun', 'adjective', 'verb']",4
+391,sein,"['noun', 'determiner', 'pronoun', 'auxiliary verb']",4
+399,eine,"['determiner', 'pronoun', 'adjective', 'verb']",4
+1226,eine,"['determiner', 'adjective', 'pronoun', 'verb']",4
+1045,eine,"['determiner', 'verb', 'pronoun', 'adjective']",4
+1018,sein,"['auxiliary verb', 'determiner', 'noun', 'pronoun']",4
+616,eine,"['determiner', 'pronoun', 'adjective', 'verb']",4
+391,einen,"['noun', 'determiner', 'adjective', 'pronoun']",4
+1330,mehr,"['determiner', 'adverb', 'noun', 'conjunction']",4
+929,sein,"['auxiliary verb', 'determiner', 'adverb', 'noun']",4
+389,meinen,"['noun', 'determiner', 'verb', 'pronoun']",4
+844,sein,"['determiner', 'pronoun', 'noun', 'auxiliary verb']",4
+864,eine,"['determiner', 'pronoun', 'verb', 'adjective']",4
+929,um,"['conjunction', 'preposition', 'particle', 'adverb']",4
+555,eine,"['pronoun', 'determiner', 'verb', 'adjective']",4
+1265,eine,"['determiner', 'pronoun', 'verb', 'adjective']",4
+403,sein,"['determiner', 'pronoun', 'auxiliary verb', 'noun']",4
+1318,eine,"['determiner', 'verb', 'pronoun', 'adjective']",4
+459,sein,"['pronoun', 'determiner', 'noun', 'auxiliary verb']",4
+1330,vor,"['preposition', 'particle', 'noun', 'conjunction']",4
+822,ein,"['adverb', 'determiner', 'noun', 'particle']",4
+1295,einen,"['noun', 'determiner', 'adjective', 'pronoun']",4
+1099,ein,"['determiner', 'particle', 'conjunction', 'verb']",4
+1226,ein,"['determiner', 'particle', 'conjunction', 'verb']",4
+163,da,"['particle', 'conjunction', 'adverb', 'noun']",4
+822,eine,"['adverb', 'pronoun', 'determiner', 'verb']",4
+165,einen,"['determiner', 'pronoun', 'noun', 'adjective']",4
+399,einen,"['noun', 'determiner', 'adjective', 'pronoun']",4
+165,eine,"['determiner', 'verb', 'adjective', 'pronoun']",4
+822,einen,"['noun', 'pronoun', 'determiner', 'adjective']",4
+1316,eine,"['determiner', 'adjective', 'pronoun', 'verb']",4
+307,eine,"['determiner', 'adjective', 'verb', 'pronoun']",4
+390,sein,"['determiner', 'pronoun', 'noun', 'auxiliary verb']",4
+844,eine,"['determiner', 'pronoun', 'adjective', 'verb']",4
+1157,eine,"['determiner', 'verb', 'pronoun', 'adjective']",4
+98,sein,"['auxiliary verb', 'determiner', 'pronoun', 'noun']",4
+389,einen,"['noun', 'determiner', 'adjective', 'pronoun']",4
+810,eine,"['determiner', 'pronoun', 'adjective', 'verb']",4
+1123,einen,"['determiner', 'pronoun', 'adjective', 'noun']",4
+824,einen,"['pronoun', 'determiner', 'noun', 'verb']",4
+389,eine,"['determiner', 'pronoun', 'verb', 'adjective']",4
+822,wert,"['noun', 'verb', 'adjective', 'particle']",4
+230,einen,"['determiner', 'verb', 'pronoun', 'adjective']",4
+1348,drey,"['noun', 'adjective', 'conjunction', 'adverb']",4
+448,einen,"['determiner', 'pronoun', 'adjective', 'noun']",4
+822,um,"['conjunction', 'preposition', 'noun', 'particle']",4
+441,eine,"['determiner', 'pronoun', 'adjective', 'verb']",4
+10,eine,"['adjective', 'verb', 'determiner', 'pronoun']",4
+249,sein,"['determiner', 'auxiliary verb', 'pronoun', 'noun']",4
+248,ein,"['determiner', 'particle', 'conjunction', 'adverb']",4
+655,eine,"['adjective', 'determiner', 'verb', 'pronoun']",4
+678,einen,"['pronoun', 'determiner', 'adjective', 'noun']",4
+875,einen,"['noun', 'determiner', 'adjective', 'pronoun']",4
+467,sein,"['noun', 'determiner', 'auxiliary verb', 'pronoun']",4
+535,einen,"['determiner', 'noun', 'adjective', 'pronoun']",4
+744,eine,"['determiner', 'pronoun', 'verb', 'adjective']",4
+804,meine,"['determiner', 'adjective', 'verb', 'pronoun']",4
+822,meinen,"['verb', 'pronoun', 'determiner', 'adjective']",4
+509,eine,"['determiner', 'pronoun', 'adjective', 'verb']",4
+10,einen,"['adjective', 'noun', 'determiner', 'pronoun']",4
+142,eine,"['determiner', 'pronoun', 'adjective', 'verb']",4
+319,sein,"['auxiliary verb', 'pronoun', 'determiner', 'noun']",4
+929,sich,"['pronoun', 'noun', 'adjective', 'adverb']",4
+532,sein,"['determiner', 'adverb', 'auxiliary verb', 'noun']",4
+1010,eine,"['determiner', 'pronoun', 'adjective', 'verb']",4
+810,da,"['adverb', 'conjunction', 'noun', 'adjective']",4
+157,eine,"['determiner', 'pronoun', 'adjective', 'verb']",4
+1171,einen,"['determiner', 'verb', 'adjective', 'pronoun']",4
+305,einen,"['determiner', 'noun', 'verb', 'pronoun']",4
+694,eine,"['determiner', 'pronoun', 'verb', 'adjective']",4
+1023,ein,"['determiner', 'verb', 'particle', 'conjunction']",4
+234,ein,"['determiner', 'particle', 'verb', 'conjunction']",4
+1161,da,"['adverb', 'conjunction', 'particle']",3
+139,etwas,"['pronoun', 'adverb', 'noun']",3
+1028,da,"['adverb', 'particle', 'conjunction']",3
+996,etwas,"['noun', 'pronoun', 'adverb']",3
+230,sein,"['determiner', 'auxiliary verb', 'noun']",3
+837,auf,"['preposition', 'conjunction', 'particle']",3
+366,um,"['conjunction', 'preposition', 'particle']",3
+822,etwas,"['noun', 'pronoun', 'adverb']",3
+695,einen,"['determiner', 'adjective', 'pronoun']",3
+322,auf,"['preposition', 'particle', 'conjunction']",3
+535,ja,"['adverb', 'noun', 'particle']",3
+10,mit,"['particle', 'preposition', 'adverb']",3
+898,mit,"['preposition', 'adverb', 'particle']",3
+555,lange,"['noun', 'adjective', 'adverb']",3
+757,liebe,"['noun', 'verb', 'adjective']",3
+929,gleiche,"['adjective', 'noun', 'verb']",3
+1309,mit,"['preposition', 'particle', 'adverb']",3
+391,10,"['noun', 'adverb', 'number']",3
+1242,ja,"['particle', 'adverb', 'noun']",3
+1301,aer,"['adjective', 'adverb', 'noun']",3
+229,je,"['preposition', 'adverb', 'particle']",3
+391,11,"['noun', 'adverb', 'number']",3
+520,freien,"['adjective', 'noun', 'verb']",3
+572,einer,"['noun', 'determiner', 'pronoun']",3
+275,ab,"['preposition', 'particle', 'adverb']",3
