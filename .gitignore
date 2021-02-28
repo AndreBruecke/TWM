@@ -1,5 +1,5 @@
 /data/hana/
 */.scrapy/
 /.scrapy/
-/project/.vscode
+/scraper/.vscode
 *.pyc
